@@ -1,11 +1,11 @@
 package com.mindex.challenge.data;
 
-
+	// declaring a class ReportingStructure
 public class ReportingStructure {
 	private Employee employee; // will hold the value for the employee
 	private int numOfReports;  // will hold the number of employee reports
 	
-	// will be the fallback/initial constructor
+	// will be the initial constructor
 	public ReportingStructure() {
 		
 	}
