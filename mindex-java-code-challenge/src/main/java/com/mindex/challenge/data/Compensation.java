@@ -11,11 +11,7 @@ public class Compensation {
 		
 	}
 	
-//	public Compensation(Employee employee, Double salary, Instant effectiveDate) {
-//		this.employee = employee;
-//		this.salary = salary;
-//		this.effectiveDate = effectiveDate;
-//	}
+
 
 	public Employee getEmployee() {
 		return employee;
