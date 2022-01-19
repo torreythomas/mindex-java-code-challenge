@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service  // creating a service file to implement the logic
 public class ReportingStructureServiceImpl implements ReportingStructureService {
 
 	@Autowired
@@ -20,7 +20,9 @@ public class ReportingStructureServiceImpl implements ReportingStructureService 
 	
 	private static final Logger LOG = LoggerFactory.getLogger(ReportingStructureServiceImpl.class);
 	
-	@Override
+	 
+
+	@Override // @Override used to display any signature errors or compile errors.
 	public ReportingStructure read(String employeeId) {
 		LOG.debug("Getting total reports of employee [{}]", employeeId);
 		Employee employee = employeeRepository.findByEmployeeId(employeeId);
