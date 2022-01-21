@@ -2,6 +2,9 @@ package com.mindex.challenge.data;
 
 import java.util.List;
 
+
+// This is the file that contains all of the basic methods that are used to get their respective strings and information from the employee repository.
+
 public class Employee {
     private String employeeId;
     private String firstName;

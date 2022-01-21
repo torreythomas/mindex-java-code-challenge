@@ -12,12 +12,15 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class CompensationServiceImpl implements CompensationService {
+public class CompensationServiceImpl implements CompensationService {  
 	private static final Logger LOG = LoggerFactory.getLogger(CompensationServiceImpl.class);
 	
 	@Autowired
 	private CompensationRepository compensationRepository;
 	 
+
+	// the code sample below is creating a function that will accept compensation as a parameter and create a new
+	// field for compensation and inserting this result into the compensation repository, allowing this to be persisted.
 	@Override
 	public Compensation create(Compensation compensation) {
 		LOG.debug("Creating compensation [{}]", compensation);
@@ -25,6 +28,9 @@ public class CompensationServiceImpl implements CompensationService {
 
 	    return compensation;
 	   }
+
+	   // Creating another function that will read an id passed as a parameter and this will allow an employee's compensation
+	   // to be read when the employee is being searched by id, therefore again, persisting the information. 
 
 	@Override
 	public Compensation read(String id) {
