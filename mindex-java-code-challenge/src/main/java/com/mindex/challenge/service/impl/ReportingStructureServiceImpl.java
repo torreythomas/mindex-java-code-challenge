@@ -47,7 +47,7 @@ public class ReportingStructureServiceImpl implements ReportingStructureService 
 
 	// the encapsulated function in charge of recursively calculating the number of direct reports.
 
-	private int getNumberOfReports(Employee employee) {  // declaring a class getNumberOfReports and taking an employee (defined above) as a parameter.
+	private int getNumberOfReports(Employee employee) {  // declaring a  private class getNumberOfReports and taking an employee (defined above) as a parameter.
 		int totalReports = 0;  // setting an initial variable of totalReports to 0
 		List<Employee> empDirectReports = employee.getDirectReports();  // establishing a list containing employee's. Creating a variable that will call the recursive function (getdirectReports) for each employee listed.
 		if(empDirectReports == null) {  // establishing the base case if eDR returns null, then the total number of reports will be returned.
