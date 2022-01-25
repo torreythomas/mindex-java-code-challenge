@@ -15,36 +15,36 @@ public class EmployeeServiceImpl implements EmployeeService {
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeServiceImpl.class); // activating the logger
 
     @Autowired
-    private EmployeeRepository employeeRepository; // setting the employeerepository variable as a constant 
+    private EmployeeRepository employeeRepository; 
 
     @Override
-    public Employee create(Employee employee) {  // defining the logic for the create functionality when called to create an employee.
+    public Employee create(Employee employee) { 
         LOG.debug("Creating employee [{}]", employee);
 
-        employee.setEmployeeId(UUID.randomUUID().toString());  // creating an employee and setting the id to a random identifier and converting that identifier to a string.
-        employeeRepository.insert(employee);  // inserting this employee with a UUID into the employee repository.
+        employee.setEmployeeId(UUID.randomUUID().toString());  
+        employeeRepository.insert(employee); 
 
-        return employee;   // returning an employee.
+        return employee;   
     }
 
     @Override
-    public Employee read(String id) {  // creating the functionality to read the id and get an employee by id now as well. 
-        LOG.debug("Creating employee with id [{}]", id);  // checking to ensure the employee was created.
+    public Employee read(String id) {  
+        LOG.debug("Creating employee with id [{}]", id);  
 
-        Employee employee = employeeRepository.findByEmployeeId(id);  // using the findEmployeeId method taking in an id to search the employee repo for the specific employee and setting that employee equal to employee.
+        Employee employee = employeeRepository.findByEmployeeId(id); 
 
-        // a catch function that if employee is not found (null) will throw a runtime exception that will claim the employee id entered is not valid.
+       
         if (employee == null) {  
             throw new RuntimeException("Invalid employeeId: " + id);
         }
 
-        return employee;  // returns the employee 
+        return employee;  
     }
 
     @Override
-    public Employee update(Employee employee) {  // creating the functionality to update an employee by allowing the information to be saved (persisted) to the employee repository. (compensation only).
+    public Employee update(Employee employee) {  
         LOG.debug("Updating employee [{}]", employee);
 
-        return employeeRepository.save(employee);  // will save an updated employee to the employee repository.
+        return employeeRepository.save(employee);  
     }
 }
