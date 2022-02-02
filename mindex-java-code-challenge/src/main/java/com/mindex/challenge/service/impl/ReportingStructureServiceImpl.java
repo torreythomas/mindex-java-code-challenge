@@ -39,6 +39,7 @@ public class ReportingStructureServiceImpl implements ReportingStructureService 
 	
 
 	private int getNumberOfReports(Employee employee) {  
+		int totalReports = 0;
 		List<Employee> empDirectReports = employee.getDirectReports();  
 		if(empDirectReports == null) {  
 			return totalReports;

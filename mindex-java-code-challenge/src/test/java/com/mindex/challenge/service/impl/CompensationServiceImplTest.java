@@ -67,7 +67,7 @@ public class CompensationServiceImplTest {
 		Compensation createdCompensation = restTemplate.postForEntity(createCompUrl, testCompensation, Compensation.class).getBody();
 		assertNotNull(createdCompensation.getEmployee());
 		assertNotNull(createdCompensation.getSalary());
-		assertNotNull(createdCompensation.getEffectiveDate());
+		assertNotNull(creasstedCompensation.getEffectiveDate());
 		
 		//read test
 		Compensation readCompensation = restTemplate.getForEntity(readCompUrl, Compensation.class, testEmpId).getBody();
