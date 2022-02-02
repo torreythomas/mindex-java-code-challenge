@@ -13,7 +13,7 @@ public class CompensationController {
 	private static final Logger LOG = LoggerFactory.getLogger(CompensationController.class);
 
 
-    // Automatically updating and occupying the code with a new compensation field and inserting a value entered via a path entry
+    // automatically initializing the CompensationService object as to allow the inheritence to occur in this file
     @Autowired
     private CompensationService compensationService;
     
